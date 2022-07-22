@@ -1,0 +1,97 @@
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  1.561594e+05    0.00e+00    1.53e+05   0.00e+00   0.00e+00  1.00e+04        0    4.20e-02    3.15e-01
+
+CHOLMOD version 3.0.14, Oct 22, 2019: Symbolic Analysis: status: OK
+  Architecture: Microsoft Windows
+    sizeof(int):      4
+    sizeof(SuiteSparse_long):  8
+    sizeof(void *):   8
+    sizeof(double):   8
+    sizeof(Int):      4 (CHOLMOD's basic integer)
+    sizeof(BLAS_INT): 4 (integer used in the BLAS)
+  Results from most recent analysis:
+    Cholesky flop count: 9.0091e+06
+    Nonzeros in L:       45765
+  memory blocks in use:          11
+  memory in use (MB):           0.0
+  peak memory usage (MB):       0.2
+  maxrank:    update/downdate rank:   8
+  supernodal control: 1 40 (supernodal if flops/lnz >= 40)
+  nmethods:   number of ordering methods to try: 1
+    method 0: natural
+        flop count: 9.0091e+06
+        nnz(L):     45765
+  OK
+   1  1.558150e+05    3.44e+02    3.90e+02   1.89e+00   1.00e+00  3.00e+04        1    1.69e-01    4.86e-01
+   2  1.558142e+05    8.23e-01    8.97e+01   2.09e-01   1.01e+00  9.00e+04        1    8.68e-02    5.73e-01
+   3  1.558140e+05    1.82e-01    6.57e+01   1.21e-01   1.03e+00  2.70e+05        1    9.21e-02    6.65e-01
+   4  1.558140e+05    2.38e-02    2.26e+01   7.41e-02   1.05e+00  8.10e+05        1    8.72e-02    7.53e-01
+   5  1.558140e+05    1.52e-03    1.37e+01   4.36e-02   1.12e+00  2.43e+06        1    8.64e-02    8.40e-01
+   6  1.558140e+05    3.56e-04    6.60e+00   4.98e-02   1.08e+00  7.29e+06        1    8.47e-02    9.25e-01
+   7  1.558140e+05    7.98e-05    2.71e+00   3.25e-02   1.06e+00  2.19e+07        1    8.42e-02    1.01e+00
+   8  1.558140e+05    5.93e-06    1.03e+00   8.33e-03   1.16e+00  6.56e+07        1    8.34e-02    1.09e+00
+   9  1.558140e+05    4.76e-07    1.05e+00   7.87e-04   1.37e+00  1.97e+08        1    1.38e-01    1.23e+00
+  10  1.558140e+05    7.29e-08    1.43e+00   5.31e-05   1.40e+00  5.90e+08        1    8.44e-02    1.32e+00
+  11  1.558140e+05    1.18e-08    6.63e-01   1.36e-05   1.41e+00  1.77e+09        1    8.37e-02    1.40e+00
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 179146
+   Parameters : 69341
+   Iterations : 12
+         Time : 1.40682 [s]
+ Initial cost : 0.933642 [px]
+   Final cost : 0.932609 [px]
+  Termination : Convergence
+
+  => Completed observations: 61
+  => Merged observations: 0
+  => Filtered observations: 35
+  => Changed observations: 0.001072
+  => Filtered images: 0
+
+==============================================================================
+Registering image #143 (52)
+==============================================================================
+
+
+
+
+
+
+:
+:
+:
+:
+:
+:
+:
+;
+;
+;
+;
+;
+;
+;
+;;;
+
+
+./images/0134.jpg sharpness= 119.97716157485945
+./images/0137.jpg sharpness= 87.292110181125
+./images/0138.jpg sharpness= 153.5903572250282
+./images/0142.jpg sharpness= 273.373650896362
+./images/0139.jpg sharpness= 188.96617858801835
+./images/0107.jpg sharpness= 328.9911469672576
+./images/0126.jpg sharpness= 249.04387470291903
+./images/0140.jpg sharpness= 230.3138767552672
+./images/0143.jpg sharpness= 473.78853254556265
+up vector was [-0.9995879  -0.00150619 -0.02866641]
+computing center of attention...
+[ 0.25633094 -0.29578212 -0.17005183]
+avg camera distance from origin 3.1946743361650127
+142 frames
+writing transforms.json
+
+
+(env) c:\Users\schlb\Documents\GitHub\instant-ngp\data\nerf\test>python C:\Users\schlb\Documents\GitHub\instant-ngp\scripts\colmap2nerf.py --colmap_matcher sequential --run_colmap --aabb_scale 16
