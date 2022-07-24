@@ -95,3 +95,906 @@ writing transforms.json
 
 
 (env) c:\Users\schlb\Documents\GitHub\instant-ngp\data\nerf\test>python C:\Users\schlb\Documents\GitHub\instant-ngp\scripts\colmap2nerf.py --colmap_matcher sequential --run_colmap --aabb_scale 16
+
+
+
+
+
+>>>> next iteration
+
+
+**********************************************************************
+** Visual Studio 2019 Developer Command Prompt v16.11.17
+** Copyright (c) 2021 Microsoft Corporation
+**********************************************************************
+
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community>cd c:\Users\schlb\Documents\GitHub\instant-ngp
+
+c:\Users\schlb\Documents\GitHub\instant-ngp>ls
+CMakeLists.txt  README.md  configs  dependencies  env      requirements.txt          scripts
+LICENSE.txt     cmake      data     docs          include  runningColmapLocally.txt  src
+
+c:\Users\schlb\Documents\GitHub\instant-ngp>.\env\Scripts\activate
+
+(env) c:\Users\schlb\Documents\GitHub\instant-ngp>cmake . -B build
+-- Building for: Visual Studio 16 2019
+-- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.22000.
+-- The C compiler identification is MSVC 19.29.30146.0
+-- The CXX compiler identification is MSVC 19.29.30146.0
+-- The CUDA compiler identification is NVIDIA 11.7.64
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Check for working CUDA compiler: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.7/bin/nvcc.exe - skipped
+-- Detecting CUDA compile features
+-- Detecting CUDA compile features - done
+-- Targeting GPU architectures: 75
+-- Module support is disabled.
+-- Version: 9.0.0
+-- Build type:
+-- CXX_STANDARD: 14
+-- Required features: cxx_variadic_templates
+-- Could NOT find Vulkan (missing: Vulkan_LIBRARY Vulkan_INCLUDE_DIR) (found version "")
+CMake Warning at CMakeLists.txt:118 (message):
+  Vulkan was not found.  Neural graphics primitives will still compile and
+  run correctly, but DLSS will not be supported.
+
+
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - not found
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - no
+-- Found Threads: TRUE
+-- Using Win32 for window creation
+-- Found OpenMP_C: -openmp (found version "2.0")
+-- Found OpenMP_CXX: -openmp (found version "2.0")
+-- Found OpenMP: TRUE (found version "2.0")
+-- !!! Warning OptiX_INSTALL_DIR not set in environment. using default
+-- OptiX_INSTALL_DIR value: C:\ProgramData\NVIDIA Corporation\OptiX SDK 7.5.0
+-- OptiX headers (optix.h and friends) not found.
+CMake Warning at CMakeLists.txt:194 (message):
+  OptiX was not found.  Neural graphics primitives will still compile and run
+  correctly.  However, SDF training in 'raystab' and 'pathescape' modes will
+  be significantly slower.
+
+
+-- Found Python: C:/Users/schlb/Documents/GitHub/instant-ngp/env/Scripts/python.exe (found suitable version "3.9.7", minimum required is "3.7") found components: Interpreter Development Development.Module Development.Embed
+-- pybind11 v2.7.1
+CMake Warning (dev) at C:/Program Files/CMake/share/cmake-3.24/Modules/CMakeDependentOption.cmake:89 (message):
+  Policy CMP0127 is not set: cmake_dependent_option() supports full Condition
+  Syntax.  Run "cmake --help-policy CMP0127" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  dependencies/pybind11/CMakeLists.txt:98 (cmake_dependent_option)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Performing Test HAS_MSVC_GL_LTCG
+-- Performing Test HAS_MSVC_GL_LTCG - Success
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/schlb/Documents/GitHub/instant-ngp/build
+
+(env) c:\Users\schlb\Documents\GitHub\instant-ngp>cmake --build build --config RelWithDebInfo -j 16
+Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Building Custom Rule C:/Users/schlb/Documents/GitHub/instant-ngp/dependencies/glfw/src/CMakeLists.txt
+  context.c
+  init.c
+  input.c
+  monitor.c
+  vulkan.c
+  window.c
+  win32_init.c
+  win32_joystick.c
+  win32_monitor.c
+  win32_time.c
+  win32_thread.c
+  win32_window.c
+  wgl_context.c
+  egl_context.c
+  osmesa_context.c
+  Generating Code...
+  glfw_objects.vcxproj -> C:\Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\glfw\src\glfw_objects.dir\RelW
+  ithDebInfo\glfw_objects.lib
+  Building Custom Rule C:/Users/schlb/Documents/GitHub/instant-ngp/dependencies/tiny-cuda-nn/dependencies/fmt/CMakeList
+  s.txt
+  format.cc
+  os.cc
+  fmt.vcxproj -> C:\Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn\dependencies\fmt\RelWithDe
+  bInfo\fmt.lib
+  Building Custom Rule C:/Users/schlb/Documents/GitHub/instant-ngp/dependencies/tiny-cuda-nn/CMakeLists.txt
+  Compiling CUDA source file ..\..\..\dependencies\tiny-cuda-nn\src\common_device.cu...
+  Compiling CUDA source file ..\..\..\dependencies\tiny-cuda-nn\src\common.cu...
+  Compiling CUDA source file ..\..\..\dependencies\tiny-cuda-nn\src\encoding.cu...
+  Compiling CUDA source file ..\..\..\dependencies\tiny-cuda-nn\src\cpp_api.cu...
+  Compiling CUDA source file ..\..\..\dependencies\tiny-cuda-nn\src\cutlass_mlp.cu...
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn>"C:\Program Files\NVIDIA GPU Comput
+  ing Toolkit\CUDA\v11.7\bin\nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75
+  ,code=\"sm_75,compute_75\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\T
+  ools\MSVC\14.29.30133\bin\HostX64\x64" -x cu   -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-
+  nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schlb\
+  Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\GitH
+  ub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHub\
+  instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA
+  \v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extended-
+  lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DTCNN_MIN_GPU_A
+  RCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_WINDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEB
+  UG -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\
+  Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn\RelWithDebInfo\tiny-cuda-nn.pdb /FS /Zi  /MD
+   /GR" -o tiny-cuda-nn.dir\RelWithDebInfo\common.obj "C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cu
+  da-nn\src\common.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn>"C:\Program Files\NVIDIA GPU Comput
+  ing Toolkit\CUDA\v11.7\bin\nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75
+  ,code=\"sm_75,compute_75\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\T
+  ools\MSVC\14.29.30133\bin\HostX64\x64" -x cu   -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-
+  nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schlb\
+  Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\GitH
+  ub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHub\
+  instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA
+  \v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extended-
+  lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DTCNN_MIN_GPU_A
+  RCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_WINDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEB
+  UG -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\
+  Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn\RelWithDebInfo\tiny-cuda-nn.pdb /FS /Zi  /MD
+   /GR" -o tiny-cuda-nn.dir\RelWithDebInfo\common_device.obj "C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\
+  tiny-cuda-nn\src\common_device.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn>"C:\Program Files\NVIDIA GPU Comput
+  ing Toolkit\CUDA\v11.7\bin\nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75
+  ,code=\"sm_75,compute_75\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\T
+  ools\MSVC\14.29.30133\bin\HostX64\x64" -x cu   -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-
+  nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schlb\
+  Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\GitH
+  ub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHub\
+  instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA
+  \v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extended-
+  lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DTCNN_MIN_GPU_A
+  RCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_WINDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEB
+  UG -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\
+  Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn\RelWithDebInfo\tiny-cuda-nn.pdb /FS /Zi  /MD
+   /GR" -o tiny-cuda-nn.dir\RelWithDebInfo\cpp_api.obj "C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-c
+  uda-nn\src\cpp_api.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn>"C:\Program Files\NVIDIA GPU Comput
+  ing Toolkit\CUDA\v11.7\bin\nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75
+  ,code=\"sm_75,compute_75\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\T
+  ools\MSVC\14.29.30133\bin\HostX64\x64" -x cu   -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-
+  nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schlb\
+  Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\GitH
+  ub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHub\
+  instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA
+  \v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extended-
+  lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DTCNN_MIN_GPU_A
+  RCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_WINDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEB
+  UG -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\
+  Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn\RelWithDebInfo\tiny-cuda-nn.pdb /FS /Zi  /MD
+   /GR" -o tiny-cuda-nn.dir\RelWithDebInfo\encoding.obj "C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-
+  cuda-nn\src\encoding.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn>"C:\Program Files\NVIDIA GPU Comput
+  ing Toolkit\CUDA\v11.7\bin\nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75
+  ,code=\"sm_75,compute_75\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\T
+  ools\MSVC\14.29.30133\bin\HostX64\x64" -x cu   -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-
+  nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schlb\
+  Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\GitH
+  ub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHub\
+  instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA
+  \v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extended-
+  lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DTCNN_MIN_GPU_A
+  RCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_WINDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEB
+  UG -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\
+  Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn\RelWithDebInfo\tiny-cuda-nn.pdb /FS /Zi  /MD
+   /GR" -o tiny-cuda-nn.dir\RelWithDebInfo\cutlass_mlp.obj "C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\ti
+  ny-cuda-nn\src\cutlass_mlp.cu"
+  Compiling CUDA source file ..\..\..\dependencies\tiny-cuda-nn\src\network.cu...
+  Compiling CUDA source file ..\..\..\dependencies\tiny-cuda-nn\src\loss.cu...
+  Compiling CUDA source file ..\..\..\dependencies\tiny-cuda-nn\src\reduce_sum.cu...
+  Compiling CUDA source file ..\..\..\dependencies\tiny-cuda-nn\src\optimizer.cu...
+  Compiling CUDA source file ..\..\..\dependencies\tiny-cuda-nn\src\object.cu...
+  Compiling CUDA source file ..\..\..\dependencies\tiny-cuda-nn\src\fully_fused_mlp.cu...
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn>"C:\Program Files\NVIDIA GPU Comput
+  ing Toolkit\CUDA\v11.7\bin\nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75
+  ,code=\"sm_75,compute_75\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\T
+  ools\MSVC\14.29.30133\bin\HostX64\x64" -x cu   -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-
+  nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schlb\
+  Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\GitH
+  ub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHub\
+  instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA
+  \v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extended-
+  lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DTCNN_MIN_GPU_A
+  RCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_WINDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEB
+  UG -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\
+  Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn\RelWithDebInfo\tiny-cuda-nn.pdb /FS /Zi  /MD
+   /GR" -o tiny-cuda-nn.dir\RelWithDebInfo\loss.obj "C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda
+  -nn\src\loss.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn>"C:\Program Files\NVIDIA GPU Comput
+  ing Toolkit\CUDA\v11.7\bin\nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75
+  ,code=\"sm_75,compute_75\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\T
+  ools\MSVC\14.29.30133\bin\HostX64\x64" -x cu   -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-
+  nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schlb\
+  Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\GitH
+  ub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHub\
+  instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA
+  \v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extended-
+  lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DTCNN_MIN_GPU_A
+  RCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_WINDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEB
+  UG -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\
+  Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn\RelWithDebInfo\tiny-cuda-nn.pdb /FS /Zi  /MD
+   /GR" -o tiny-cuda-nn.dir\RelWithDebInfo\optimizer.obj "C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny
+  -cuda-nn\src\optimizer.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn>"C:\Program Files\NVIDIA GPU Comput
+  ing Toolkit\CUDA\v11.7\bin\nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75
+  ,code=\"sm_75,compute_75\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\T
+  ools\MSVC\14.29.30133\bin\HostX64\x64" -x cu   -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-
+  nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schlb\
+  Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\GitH
+  ub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHub\
+  instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA
+  \v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extended-
+  lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DTCNN_MIN_GPU_A
+  RCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_WINDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEB
+  UG -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\
+  Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn\RelWithDebInfo\tiny-cuda-nn.pdb /FS /Zi  /MD
+   /GR" -o tiny-cuda-nn.dir\RelWithDebInfo\object.obj "C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cu
+  da-nn\src\object.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn>"C:\Program Files\NVIDIA GPU Comput
+  ing Toolkit\CUDA\v11.7\bin\nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75
+  ,code=\"sm_75,compute_75\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\T
+  ools\MSVC\14.29.30133\bin\HostX64\x64" -x cu   -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-
+  nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schlb\
+  Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\GitH
+  ub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHub\
+  instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA
+  \v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extended-
+  lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DTCNN_MIN_GPU_A
+  RCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_WINDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEB
+  UG -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\
+  Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn\RelWithDebInfo\tiny-cuda-nn.pdb /FS /Zi  /MD
+   /GR" -o tiny-cuda-nn.dir\RelWithDebInfo\network.obj "C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-c
+  uda-nn\src\network.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn>"C:\Program Files\NVIDIA GPU Comput
+  ing Toolkit\CUDA\v11.7\bin\nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75
+  ,code=\"sm_75,compute_75\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\T
+  ools\MSVC\14.29.30133\bin\HostX64\x64" -x cu   -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-
+  nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schlb\
+  Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\GitH
+  ub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHub\
+  instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA
+  \v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extended-
+  lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DTCNN_MIN_GPU_A
+  RCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_WINDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEB
+  UG -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\
+  Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn\RelWithDebInfo\tiny-cuda-nn.pdb /FS /Zi  /MD
+   /GR" -o tiny-cuda-nn.dir\RelWithDebInfo\reduce_sum.obj "C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tin
+  y-cuda-nn\src\reduce_sum.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn>"C:\Program Files\NVIDIA GPU Comput
+  ing Toolkit\CUDA\v11.7\bin\nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75
+  ,code=\"sm_75,compute_75\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\T
+  ools\MSVC\14.29.30133\bin\HostX64\x64" -x cu   -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-
+  nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schlb\
+  Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\GitH
+  ub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHub\
+  instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA
+  \v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extended-
+  lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DTCNN_MIN_GPU_A
+  RCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_WINDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEB
+  UG -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\
+  Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn\RelWithDebInfo\tiny-cuda-nn.pdb /FS /Zi  /MD
+   /GR" -o tiny-cuda-nn.dir\RelWithDebInfo\fully_fused_mlp.obj "C:\Users\schlb\Documents\GitHub\instant-ngp\dependencie
+  s\tiny-cuda-nn\src\fully_fused_mlp.cu"
+C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include\cutlass/platform/pla
+tform.h(845): warning #68-D: integer conversion resulted in a change of sign [C:\Users\schlb\Documents\GitHub\instant-n
+gp\build\dependencies\tiny-cuda-nn\tiny-cuda-nn.vcxproj]
+
+C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include\cutlass/platform/pla
+tform.h(845): warning #68-D: integer conversion resulted in a change of sign [C:\Users\schlb\Documents\GitHub\instant-n
+gp\build\dependencies\tiny-cuda-nn\tiny-cuda-nn.vcxproj]
+
+  common.cu
+  common_device.cu
+  cpp_api.cu
+  reduce_sum.cu
+  object.cu
+  network.cu
+  loss.cu
+  optimizer.cu
+  encoding.cu
+C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include\cutlass/platform/pla
+tform.h(845): warning #68-D: integer conversion resulted in a change of sign [C:\Users\schlb\Documents\GitHub\instant-n
+gp\build\dependencies\tiny-cuda-nn\tiny-cuda-nn.vcxproj]
+
+  cutlass_mlp.cu
+C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include\cutlass/platform/pla
+tform.h(845): warning #68-D: integer conversion resulted in a change of sign [C:\Users\schlb\Documents\GitHub\instant-n
+gp\build\dependencies\tiny-cuda-nn\tiny-cuda-nn.vcxproj]
+
+  fully_fused_mlp.cu
+  tiny-cuda-nn.vcxproj -> C:\Users\schlb\Documents\GitHub\instant-ngp\build\dependencies\tiny-cuda-nn\RelWithDebInfo\ti
+  ny-cuda-nn.lib
+  Building Custom Rule C:/Users/schlb/Documents/GitHub/instant-ngp/CMakeLists.txt
+  Compiling CUDA source file ..\src\tinyexr_wrapper.cu...
+  Compiling CUDA source file ..\src\nerf_loader.cu...
+  Compiling CUDA source file ..\src\common_device.cu...
+  Compiling CUDA source file ..\src\camera_path.cu...
+  Compiling CUDA source file ..\src\testbed_nerf.cu...
+  Compiling CUDA source file ..\src\testbed.cu...
+  Compiling CUDA source file ..\src\render_buffer.cu...
+  Compiling CUDA source file ..\src\testbed_sdf.cu...
+  Compiling CUDA source file ..\src\marching_cubes.cu...
+  Compiling CUDA source file ..\src\testbed_volume.cu...
+  Compiling CUDA source file ..\src\testbed_image.cu...
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75,code=\"sm_75,compute_75\"
+   --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\
+  HostX64\x64" -x cu -rdc=true  -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\glfw\include" -I"C:\Users\s
+  chlb\Documents\GitHub\instant-ngp\dependencies\imgui" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\gl3
+  w" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\depend
+  encies\eigen" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\filesystem" -I"C:\Users\schlb\Documents\Git
+  Hub\instant-ngp\dependencies\nanovdb" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinylogger" -I"C:\U
+  sers\schlb\Documents\GitHub\instant-ngp\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cud
+  a-nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schl
+  b\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHu
+  b\instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CU
+  DA\v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extende
+  d-lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DNGP_GUI -D"N
+  GP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_W
+  INDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEBUG -DNGP_GUI -D"NGP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO
+  -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\Users\schlb\Documents\GitHub\instant-ngp\
+  build\RelWithDebInfo\ngp.pdb /FS /Zi  /MD /GR" -o ngp.dir\RelWithDebInfo\marching_cubes.obj "C:\Users\schlb\Documents
+  \GitHub\instant-ngp\src\marching_cubes.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75,code=\"sm_75,compute_75\"
+   --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\
+  HostX64\x64" -x cu -rdc=true  -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\glfw\include" -I"C:\Users\s
+  chlb\Documents\GitHub\instant-ngp\dependencies\imgui" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\gl3
+  w" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\depend
+  encies\eigen" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\filesystem" -I"C:\Users\schlb\Documents\Git
+  Hub\instant-ngp\dependencies\nanovdb" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinylogger" -I"C:\U
+  sers\schlb\Documents\GitHub\instant-ngp\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cud
+  a-nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schl
+  b\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHu
+  b\instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CU
+  DA\v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extende
+  d-lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DNGP_GUI -D"N
+  GP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_W
+  INDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEBUG -DNGP_GUI -D"NGP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO
+  -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\Users\schlb\Documents\GitHub\instant-ngp\
+  build\RelWithDebInfo\ngp.pdb /FS /Zi  /MD /GR" -o ngp.dir\RelWithDebInfo\testbed_nerf.obj "C:\Users\schlb\Documents\G
+  itHub\instant-ngp\src\testbed_nerf.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75,code=\"sm_75,compute_75\"
+   --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\
+  HostX64\x64" -x cu -rdc=true  -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\glfw\include" -I"C:\Users\s
+  chlb\Documents\GitHub\instant-ngp\dependencies\imgui" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\gl3
+  w" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\depend
+  encies\eigen" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\filesystem" -I"C:\Users\schlb\Documents\Git
+  Hub\instant-ngp\dependencies\nanovdb" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinylogger" -I"C:\U
+  sers\schlb\Documents\GitHub\instant-ngp\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cud
+  a-nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schl
+  b\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHu
+  b\instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CU
+  DA\v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extende
+  d-lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DNGP_GUI -D"N
+  GP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_W
+  INDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEBUG -DNGP_GUI -D"NGP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO
+  -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\Users\schlb\Documents\GitHub\instant-ngp\
+  build\RelWithDebInfo\ngp.pdb /FS /Zi  /MD /GR" -o ngp.dir\RelWithDebInfo\testbed_volume.obj "C:\Users\schlb\Documents
+  \GitHub\instant-ngp\src\testbed_volume.cu"
+
+
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75,code=\"sm_75,compute_75\"
+   --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\
+  HostX64\x64" -x cu -rdc=true  -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\glfw\include" -I"C:\Users\s
+  chlb\Documents\GitHub\instant-ngp\dependencies\imgui" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\gl3
+  w" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\depend
+  encies\eigen" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\filesystem" -I"C:\Users\schlb\Documents\Git
+  Hub\instant-ngp\dependencies\nanovdb" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinylogger" -I"C:\U
+  sers\schlb\Documents\GitHub\instant-ngp\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cud
+  a-nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schl
+  b\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHu
+  b\instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CU
+  DA\v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extende
+  d-lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DNGP_GUI -D"N
+  GP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_W
+  INDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEBUG -DNGP_GUI -D"NGP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO
+  -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\Users\schlb\Documents\GitHub\instant-ngp\
+  build\RelWithDebInfo\ngp.pdb /FS /Zi  /MD /GR" -o ngp.dir\RelWithDebInfo\testbed.obj "C:\Users\schlb\Documents\GitHub
+  \instant-ngp\src\testbed.cu"
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75,code=\"sm_75,compute_75\"
+   --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\
+  HostX64\x64" -x cu -rdc=true  -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\glfw\include" -I"C:\Users\s
+  chlb\Documents\GitHub\instant-ngp\dependencies\imgui" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\gl3
+  w" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\depend
+  encies\eigen" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\filesystem" -I"C:\Users\schlb\Documents\Git
+  Hub\instant-ngp\dependencies\nanovdb" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinylogger" -I"C:\U
+  sers\schlb\Documents\GitHub\instant-ngp\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cud
+  a-nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schl
+  b\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHu
+  b\instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CU
+  DA\v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extende
+  d-lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DNGP_GUI -D"N
+  GP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_W
+  INDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEBUG -DNGP_GUI -D"NGP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO
+  -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\Users\schlb\Documents\GitHub\instant-ngp\
+  build\RelWithDebInfo\ngp.pdb /FS /Zi  /MD /GR" -o ngp.dir\RelWithDebInfo\testbed_sdf.obj "C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\src\testbed_sdf.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75,code=\"sm_75,compute_75\"
+   --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\
+  HostX64\x64" -x cu -rdc=true  -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\glfw\include" -I"C:\Users\s
+  chlb\Documents\GitHub\instant-ngp\dependencies\imgui" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\gl3
+  w" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\depend
+  encies\eigen" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\filesystem" -I"C:\Users\schlb\Documents\Git
+  Hub\instant-ngp\dependencies\nanovdb" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinylogger" -I"C:\U
+  sers\schlb\Documents\GitHub\instant-ngp\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cud
+  a-nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schl
+  b\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHu
+  b\instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CU
+  DA\v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extende
+  d-lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DNGP_GUI -D"N
+  GP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_W
+  INDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEBUG -DNGP_GUI -D"NGP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO
+  -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\Users\schlb\Documents\GitHub\instant-ngp\
+  build\RelWithDebInfo\ngp.pdb /FS /Zi  /MD /GR" -o ngp.dir\RelWithDebInfo\tinyexr_wrapper.obj "C:\Users\schlb\Document
+  s\GitHub\instant-ngp\src\tinyexr_wrapper.cu"
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75,code=\"sm_75,compute_75\"
+   --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\
+  HostX64\x64" -x cu -rdc=true  -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\glfw\include" -I"C:\Users\s
+  chlb\Documents\GitHub\instant-ngp\dependencies\imgui" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\gl3
+  w" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\depend
+  encies\eigen" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\filesystem" -I"C:\Users\schlb\Documents\Git
+  Hub\instant-ngp\dependencies\nanovdb" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinylogger" -I"C:\U
+  sers\schlb\Documents\GitHub\instant-ngp\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cud
+  a-nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schl
+  b\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHu
+  b\instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CU
+  DA\v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extende
+  d-lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DNGP_GUI -D"N
+  GP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_W
+  INDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEBUG -DNGP_GUI -D"NGP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO
+  -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\Users\schlb\Documents\GitHub\instant-ngp\
+  build\RelWithDebInfo\ngp.pdb /FS /Zi  /MD /GR" -o ngp.dir\RelWithDebInfo\common_device.obj "C:\Users\schlb\Documents\
+  GitHub\instant-ngp\src\common_device.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75,code=\"sm_75,compute_75\"
+   --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\
+  HostX64\x64" -x cu -rdc=true  -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\glfw\include" -I"C:\Users\s
+  chlb\Documents\GitHub\instant-ngp\dependencies\imgui" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\gl3
+  w" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\depend
+  encies\eigen" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\filesystem" -I"C:\Users\schlb\Documents\Git
+  Hub\instant-ngp\dependencies\nanovdb" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinylogger" -I"C:\U
+  sers\schlb\Documents\GitHub\instant-ngp\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cud
+  a-nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schl
+  b\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHu
+  b\instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CU
+  DA\v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extende
+  d-lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DNGP_GUI -D"N
+  GP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_W
+  INDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEBUG -DNGP_GUI -D"NGP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO
+  -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\Users\schlb\Documents\GitHub\instant-ngp\
+  build\RelWithDebInfo\ngp.pdb /FS /Zi  /MD /GR" -o ngp.dir\RelWithDebInfo\render_buffer.obj "C:\Users\schlb\Documents\
+  GitHub\instant-ngp\src\render_buffer.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75,code=\"sm_75,compute_75\"
+   --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\
+  HostX64\x64" -x cu -rdc=true  -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\glfw\include" -I"C:\Users\s
+  chlb\Documents\GitHub\instant-ngp\dependencies\imgui" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\gl3
+  w" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\depend
+  encies\eigen" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\filesystem" -I"C:\Users\schlb\Documents\Git
+  Hub\instant-ngp\dependencies\nanovdb" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinylogger" -I"C:\U
+  sers\schlb\Documents\GitHub\instant-ngp\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cud
+  a-nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schl
+  b\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHu
+  b\instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CU
+  DA\v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extende
+  d-lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DNGP_GUI -D"N
+  GP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_W
+  INDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEBUG -DNGP_GUI -D"NGP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO
+  -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\Users\schlb\Documents\GitHub\instant-ngp\
+  build\RelWithDebInfo\ngp.pdb /FS /Zi  /MD /GR" -o ngp.dir\RelWithDebInfo\camera_path.obj "C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\src\camera_path.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75,code=\"sm_75,compute_75\"
+   --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\
+  HostX64\x64" -x cu -rdc=true  -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\glfw\include" -I"C:\Users\s
+  chlb\Documents\GitHub\instant-ngp\dependencies\imgui" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\gl3
+  w" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\depend
+  encies\eigen" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\filesystem" -I"C:\Users\schlb\Documents\Git
+  Hub\instant-ngp\dependencies\nanovdb" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinylogger" -I"C:\U
+  sers\schlb\Documents\GitHub\instant-ngp\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cud
+  a-nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schl
+  b\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHu
+  b\instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CU
+  DA\v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extende
+  d-lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DNGP_GUI -D"N
+  GP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_W
+  INDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEBUG -DNGP_GUI -D"NGP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO
+  -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\Users\schlb\Documents\GitHub\instant-ngp\
+  build\RelWithDebInfo\ngp.pdb /FS /Zi  /MD /GR" -o ngp.dir\RelWithDebInfo\testbed_image.obj "C:\Users\schlb\Documents\
+  GitHub\instant-ngp\src\testbed_image.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75,code=\"sm_75,compute_75\"
+   --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\
+  HostX64\x64" -x cu -rdc=true  -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\glfw\include" -I"C:\Users\s
+  chlb\Documents\GitHub\instant-ngp\dependencies\imgui" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\gl3
+  w" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\depend
+  encies\eigen" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\filesystem" -I"C:\Users\schlb\Documents\Git
+  Hub\instant-ngp\dependencies\nanovdb" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinylogger" -I"C:\U
+  sers\schlb\Documents\GitHub\instant-ngp\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cud
+  a-nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schl
+  b\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHu
+  b\instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CU
+  DA\v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extende
+  d-lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DNGP_GUI -D"N
+  GP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_W
+  INDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEBUG -DNGP_GUI -D"NGP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO
+  -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\Users\schlb\Documents\GitHub\instant-ngp\
+  build\RelWithDebInfo\ngp.pdb /FS /Zi  /MD /GR" -o ngp.dir\RelWithDebInfo\nerf_loader.obj "C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\src\nerf_loader.cu"
+  Compiling CUDA source file ..\src\triangle_bvh.cu...
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75,code=\"sm_75,compute_75\"
+   --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\
+  HostX64\x64" -x cu -rdc=true  -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\glfw\include" -I"C:\Users\s
+  chlb\Documents\GitHub\instant-ngp\dependencies\imgui" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\gl3
+  w" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\depend
+  encies\eigen" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\filesystem" -I"C:\Users\schlb\Documents\Git
+  Hub\instant-ngp\dependencies\nanovdb" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinylogger" -I"C:\U
+  sers\schlb\Documents\GitHub\instant-ngp\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cud
+  a-nn\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schl
+  b\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\Gi
+  tHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHu
+  b\instant-ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CU
+  DA\v11.7\include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extende
+  d-lambda --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DNGP_GUI -D"N
+  GP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_W
+  INDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEBUG -DNGP_GUI -D"NGP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO
+  -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\Users\schlb\Documents\GitHub\instant-ngp\
+  build\RelWithDebInfo\ngp.pdb /FS /Zi  /MD /GR" -o ngp.dir\RelWithDebInfo\triangle_bvh.obj "C:\Users\schlb\Documents\G
+  itHub\instant-ngp\src\triangle_bvh.cu"
+C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\nanovdb\nanovdb/NanoVDB.h(623): warning #68-D: integer convers
+ion resulted in a change of sign [C:\Users\schlb\Documents\GitHub\instant-ngp\build\ngp.vcxproj]
+
+C:\Users\schlb\Documents\GitHub\instant-ngp\src\triangle_bvh.cu(49): warning #177-D: variable "ngp::MAX_DIST_SQ" was de
+clared but never referenced [C:\Users\schlb\Documents\GitHub\instant-ngp\build\ngp.vcxproj]
+
+CUDACOMPILE : warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed [C:\User
+s\schlb\Documents\GitHub\instant-ngp\build\ngp.vcxproj]
+            detected during:
+              instantiation of "void Eigen::internal::triangular_solver_selector<Lhs, Rhs, Side, Mode, 0, -1>::run(cons
+  t Lhs &, Rhs &) [with Lhs=Eigen::Ref<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 0, Eigen::OuterStride<-1>>, Rhs=Eigen::
+  Ref<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 0, Eigen::OuterStride<-1>>, Side=1, Mode=5]"
+  C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\eigen\Eigen\src/Core/SolveTriangular.h(183): here
+              instantiation of "void Eigen::TriangularViewImpl<MatrixType_, Mode_, Eigen::Dense>::solveInPlace<Side,Oth
+  erDerived>(const Eigen::MatrixBase<OtherDerived> &) const [with MatrixType_=Eigen::Ref<Eigen::Matrix<float, -1, -1, 0
+  , -1, -1>, 0, Eigen::OuterStride<-1>>, Mode_=5U, Side=1, OtherDerived=Eigen::Ref<Eigen::Matrix<float, -1, -1, 0, -1,
+  -1>, 0, Eigen::OuterStride<-1>>]"
+  C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\eigen\Eigen\src/Core/TriangularMatrix.h(525): here
+              instantiation of "void Eigen::TriangularViewImpl<MatrixType_, Mode_, Eigen::Dense>::solveInPlace(const Ei
+  gen::MatrixBase<OtherDerived> &) const [with MatrixType_=Eigen::Ref<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 0, Eigen
+  ::OuterStride<-1>>, Mode_=5U, OtherDerived=Eigen::Ref<Eigen::Matrix<float, -1, -1, 0, -1, -1>, 0, Eigen::OuterStride<
+  -1>>]"
+  C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\eigen\Eigen\src/LU/PartialPivLU.h(492): here
+              instantiation of "Eigen::Index Eigen::internal::partial_lu_impl<Scalar, StorageOrder, PivIndex, SizeAtCom
+  pileTime>::blocked_lu(Eigen::Index, Eigen::Index, Scalar *, Eigen::Index, PivIndex *, PivIndex &, Eigen::Index) [with
+   Scalar=float, StorageOrder=0, PivIndex=int, SizeAtCompileTime=4]"
+  C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\eigen\Eigen\src/LU/PartialPivLU.h(514): here
+              instantiation of "void Eigen::internal::partial_lu_inplace(MatrixType &, TranspositionType &, Transpositi
+  onType::StorageIndex &) [with MatrixType=Eigen::Matrix<float, 4, 4, 0, 4, 4>, TranspositionType=Eigen::Transpositions
+  <4, 4, int>]"
+  C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\eigen\Eigen\src/LU/PartialPivLU.h(540): here
+              [ 22 instantiation contexts not shown ]
+              instantiation of "void Eigen::internal::Assignment<DstXprType, SrcXprType, Functor, Eigen::internal::Dens
+  e2Dense, Weak>::run(DstXprType &, const SrcXprType &, const Functor &) [with DstXprType=Eigen::Matrix<float, 3, 4, 0,
+   3, 4>, SrcXprType=Eigen::Block<const Eigen::Product<Eigen::ReturnByValue<Eigen::MatrixExponentialReturnValue<Eigen::
+  CwiseBinaryOp<Eigen::internal::scalar_product_op<float, float>, const Eigen::Matrix<float, 4, 4, 0, 4, 4>, const Eige
+  n::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, const Eigen::Matrix<float, 4, 4, 0, 4, 4>>>>>, Eigen::M
+  atrix<float, 4, 4, 0, 4, 4>, 0>, 3, 4, false>, Functor=Eigen::internal::assign_op<float, float>, Weak=void]"
+  C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\eigen\Eigen\src/Core/AssignEvaluator.h(891): here
+              instantiation of "void Eigen::internal::call_assignment_no_alias(Dst &, const Src &, const Func &) [with
+  Dst=Eigen::Matrix<float, 3, 4, 0, 3, 4>, Src=Eigen::Block<const Eigen::Product<Eigen::ReturnByValue<Eigen::MatrixExpo
+  nentialReturnValue<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<float, float>, const Eigen::Matrix<float,
+  4, 4, 0, 4, 4>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, const Eigen::Matrix<float, 4,
+   4, 0, 4, 4>>>>>, Eigen::Matrix<float, 4, 4, 0, 4, 4>, 0>, 3, 4, false>, Func=Eigen::internal::assign_op<float, float
+  >]"
+  C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\eigen\Eigen\src/Core/PlainObjectBase.h(800): here
+              instantiation of "Derived &Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDeri
+  ved> &) [with Derived=Eigen::Matrix<float, 3, 4, 0, 3, 4>, OtherDerived=Eigen::Block<const Eigen::Product<Eigen::Retu
+  rnByValue<Eigen::MatrixExponentialReturnValue<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<float, float>,
+  const Eigen::Matrix<float, 4, 4, 0, 4, 4>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, co
+  nst Eigen::Matrix<float, 4, 4, 0, 4, 4>>>>>, Eigen::Matrix<float, 4, 4, 0, 4, 4>, 0>, 3, 4, false>]"
+  C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\eigen\Eigen\src/Core/PlainObjectBase.h(599): here
+              instantiation of "Eigen::PlainObjectBase<Derived>::PlainObjectBase(const Eigen::DenseBase<OtherDerived> &
+  ) [with Derived=Eigen::Matrix<float, 3, 4, 0, 3, 4>, OtherDerived=Eigen::Block<const Eigen::Product<Eigen::ReturnByVa
+  lue<Eigen::MatrixExponentialReturnValue<Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<float, float>, const
+  Eigen::Matrix<float, 4, 4, 0, 4, 4>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, const Ei
+  gen::Matrix<float, 4, 4, 0, 4, 4>>>>>, Eigen::Matrix<float, 4, 4, 0, 4, 4>, 0>, 3, 4, false>]"
+  C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\eigen\Eigen\src/Core/Matrix.h(418): here
+              instantiation of "Eigen::Matrix<Scalar_, Rows_, Cols_, Options_, MaxRows_, MaxCols_>::Matrix(const Eigen:
+  :EigenBase<OtherDerived> &) [with Scalar_=float, Rows_=3, Cols_=4, Options_=0, MaxRows_=3, MaxCols_=4, OtherDerived=E
+  igen::Block<const Eigen::Product<Eigen::ReturnByValue<Eigen::MatrixExponentialReturnValue<Eigen::CwiseBinaryOp<Eigen:
+  :internal::scalar_product_op<float, float>, const Eigen::Matrix<float, 4, 4, 0, 4, 4>, const Eigen::CwiseNullaryOp<Ei
+  gen::internal::scalar_constant_op<float>, const Eigen::Matrix<float, 4, 4, 0, 4, 4>>>>>, Eigen::Matrix<float, 4, 4, 0
+  , 4, 4>, 0>, 3, 4, false>]"
+  C:\Users\schlb\Documents\GitHub\instant-ngp\src\common_device.cu(35): here
+
+  camera_path.cu
+  triangle_bvh.cu
+  tinyexr_wrapper.cu
+  marching_cubes.cu
+  nerf_loader.cu
+C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinyexr/tinyexr.h(7381): warning C5208: unnamed class used in
+typedef name cannot declare members other than non-static data members, member enumerations, or member classes [C:\User
+s\schlb\Documents\GitHub\instant-ngp\build\ngp.vcxproj]
+  render_buffer.cu
+  testbed_volume.cu
+  testbed_image.cu
+  testbed.cu
+  testbed_sdf.cu
+  common_device.cu
+  testbed_nerf.cu
+  gl3w.c
+  ImGuizmo.cpp
+  imgui.cpp
+  imgui_impl_glfw.cpp
+  imgui_impl_opengl3.cpp
+  imgui_draw.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  thread_pool.cpp
+  tinyobj_loader_wrapper.cpp
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -dlink -o ngp.dir\RelWithDebInfo\ngp.device-link.obj -Xcompiler "/EHsc /W1 /nologo /O2 /FdC:\Users\schlb\D
+  ocuments\GitHub\instant-ngp\build\RelWithDebInfo\ngp.pdb /Zi  /MD /GR" -L"C:\Program Files\NVIDIA GPU Computing Toolk
+  it\CUDA\v11.7\bin/crt" -L"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\lib\x64" opengl32.lib "dependencie
+  s\tiny-cuda-nn\RelWithDebInfo\tiny-cuda-nn.lib" cuda.lib cublas.lib "dependencies\tiny-cuda-nn\dependencies\fmt\RelWi
+  thDebInfo\fmt.lib" cudadevrt.lib cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib
+  shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib -forward-unknown-to-host-compiler -Wno-deprecated
+  -gpu-targets  -gencode=arch=compute_75,code=compute_75 -gencode=arch=compute_75,code=sm_75  --machine 64 ngp.dir\RelW
+  ithDebInfo\camera_path.obj ngp.dir\RelWithDebInfo\common_device.obj ngp.dir\RelWithDebInfo\marching_cubes.obj ngp.dir
+  \RelWithDebInfo\nerf_loader.obj ngp.dir\RelWithDebInfo\render_buffer.obj ngp.dir\RelWithDebInfo\testbed.obj ngp.dir\R
+  elWithDebInfo\testbed_image.obj ngp.dir\RelWithDebInfo\testbed_nerf.obj ngp.dir\RelWithDebInfo\testbed_sdf.obj ngp.di
+  r\RelWithDebInfo\testbed_volume.obj ngp.dir\RelWithDebInfo\tinyexr_wrapper.obj ngp.dir\RelWithDebInfo\triangle_bvh.ob
+  j
+  opengl32.lib
+  tiny-cuda-nn.lib
+  cuda.lib
+  cublas.lib
+  fmt.lib
+  cudadevrt.lib
+  cudart.lib
+  kernel32.lib
+  user32.lib
+  gdi32.lib
+  winspool.lib
+  comdlg32.lib
+  advapi32.lib
+  shell32.lib
+  ole32.lib
+  oleaut32.lib
+  uuid.lib
+  odbc32.lib
+  odbccp32.lib
+  camera_path.obj
+  common_device.obj
+  marching_cubes.obj
+  nerf_loader.obj
+  render_buffer.obj
+  testbed.obj
+  testbed_image.obj
+  testbed_nerf.obj
+  testbed_sdf.obj
+  testbed_volume.obj
+  tinyexr_wrapper.obj
+  triangle_bvh.obj
+  ngp.vcxproj -> C:\Users\schlb\Documents\GitHub\instant-ngp\build\RelWithDebInfo\ngp.lib
+  Building Custom Rule C:/Users/schlb/Documents/GitHub/instant-ngp/CMakeLists.txt
+  Building Custom Rule C:/Users/schlb/Documents/GitHub/instant-ngp/CMakeLists.txt
+  Compiling CUDA source file ..\src\main.cu...
+  Compiling CUDA source file ..\src\python_api.cu...
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75,code=\"sm_75,compute_75\"
+   --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\
+  HostX64\x64" -x cu   -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\glfw\include" -I"C:\Users\schlb\Docu
+  ments\GitHub\instant-ngp\dependencies\imgui" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\gl3w" -I"C:\
+  Users\schlb\Documents\GitHub\instant-ngp\dependencies" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\ei
+  gen" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\filesystem" -I"C:\Users\schlb\Documents\GitHub\insta
+  nt-ngp\dependencies\nanovdb" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinylogger" -I"C:\Users\schl
+  b\Documents\GitHub\instant-ngp\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\incl
+  ude" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schlb\Documen
+  ts\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\GitHub\inst
+  ant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHub\instant
+  -ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\
+  include"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extended-lambda
+  --expt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DNGP_GUI -D"NGP_VERSIO
+  N=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -D_MBCS -DWIN32 -D_WINDOWS -D
+  _CRT_SECURE_NO_WARNINGS -DNDEBUG -DNGP_GUI -D"NGP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_
+  INTDIR=\"RelWithDebInfo\"" -Xcompiler "/EHsc /W1 /nologo /O2 /Fdtestbed.dir\RelWithDebInfo\vc142.pdb /FS /Zi  /MD /GR
+  " -o testbed.dir\RelWithDebInfo\main.obj "C:\Users\schlb\Documents\GitHub\instant-ngp\src\main.cu"
+
+  (env) C:\Users\schlb\Documents\GitHub\instant-ngp\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin
+  \nvcc.exe" -gencode=arch=compute_75,code=\"compute_75,compute_75\" -gencode=arch=compute_75,code=\"sm_75,compute_75\"
+   --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\
+  HostX64\x64" -x cu   -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\glfw\include" -I"C:\Users\schlb\Docu
+  ments\GitHub\instant-ngp\dependencies\imgui" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\gl3w" -I"C:\
+  Users\schlb\Documents\GitHub\instant-ngp\dependencies" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\ei
+  gen" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\filesystem" -I"C:\Users\schlb\Documents\GitHub\insta
+  nt-ngp\dependencies\nanovdb" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tinylogger" -I"C:\Users\schl
+  b\Documents\GitHub\instant-ngp\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\incl
+  ude" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies" -I"C:\Users\schlb\Documen
+  ts\GitHub\instant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\include" -I"C:\Users\schlb\Documents\GitHub\inst
+  ant-ngp\dependencies\tiny-cuda-nn\dependencies\cutlass\tools\util\include" -I"C:\Users\schlb\Documents\GitHub\instant
+  -ngp\dependencies\tiny-cuda-nn\dependencies\fmt\include" -I"C:\Users\schlb\Documents\GitHub\instant-ngp\dependencies\
+  pybind11\include" -IC:\Users\schlb\anaconda3\include -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\incl
+  ude"     --keep-dir x64\RelWithDebInfo  -maxrregcount=0  --machine 64 --compile -cudart shared --extended-lambda --ex
+  pt-relaxed-constexpr -std=c++14 -Xcompiler="/EHsc -Zi -Ob1 -bigobj"   -D_WINDOWS -DNDEBUG -DNGP_PYTHON -DNGP_GUI -D"N
+  GP_VERSION=\"1.0dev\"" -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Dpyngp_EXPORTS -D_W
+  INDLL -D_MBCS -DWIN32 -D_WINDOWS -D_CRT_SECURE_NO_WARNINGS -DNDEBUG -DNGP_PYTHON -DNGP_GUI -D"NGP_VERSION=\"1.0dev\""
+   -DTCNN_MIN_GPU_ARCH=75 -DTCNN_SHAMPOO -D"CMAKE_INTDIR=\"RelWithDebInfo\"" -Dpyngp_EXPORTS -Xcompiler "/EHsc /W1 /nol
+  ogo /O2 /Fdpyngp.dir\RelWithDebInfo\vc142.pdb /FS /Zi  /MD /GR" -o pyngp.dir\RelWithDebInfo\python_api.obj "C:\Users\
+  schlb\Documents\GitHub\instant-ngp\src\python_api.cu"
+  main.cu
+  python_api.cu
+     Creating library C:/Users/schlb/Documents/GitHub/instant-ngp/build/RelWithDebInfo/testbed.lib and object C:/Users/
+  schlb/Documents/GitHub/instant-ngp/build/RelWithDebInfo/testbed.exp
+  testbed.vcxproj -> C:\Users\schlb\Documents\GitHub\instant-ngp\build\testbed.exe
+     Creating library C:/Users/schlb/Documents/GitHub/instant-ngp/build/RelWithDebInfo/pyngp.lib and object C:/Users/sc
+  hlb/Documents/GitHub/instant-ngp/build/RelWithDebInfo/pyngp.exp
+  pyngp.vcxproj -> C:\Users\schlb\Documents\GitHub\instant-ngp\build\pyngp.cp39-win_amd64.pyd
+  Building Custom Rule C:/Users/schlb/Documents/GitHub/instant-ngp/CMakeLists.txt
+
+(env) c:\Users\schlb\Documents\GitHub\instant-ngp>ls
+CMakeLists.txt  README.md  cmake    data          docs  include           runningColmapLocally.txt  src
+LICENSE.txt     build      configs  dependencies  env   requirements.txt  scripts
+
+(env) c:\Users\schlb\Documents\GitHub\instant-ngp>colmap --version
+'colmap' is not recognized as an internal or external command,
+operable program or batch file.
+
+(env) c:\Users\schlb\Documents\GitHub\instant-ngp>colmap
+'colmap' is not recognized as an internal or external command,
+operable program or batch file.
+
+(env) c:\Users\schlb\Documents\GitHub\instant-ngp>colmap.exe
+'colmap.exe' is not recognized as an internal or external command,
+operable program or batch file.
+
+(env) c:\Users\schlb\Documents\GitHub\instant-ngp>python -m pip install -r requirements.txt
+Collecting commentjson~=0.9.0
+  Downloading commentjson-0.9.0.tar.gz (8.7 kB)
+Collecting imageio~=2.16.0
+  Downloading imageio-2.16.2-py3-none-any.whl (3.3 MB)
+     |████████████████████████████████| 3.3 MB 939 kB/s
+Collecting numpy~=1.21.2
+  Downloading numpy-1.21.6-cp39-cp39-win_amd64.whl (14.0 MB)
+     |████████████████████████████████| 14.0 MB 731 kB/s
+Collecting pybind11~=2.7.1
+  Downloading pybind11-2.7.1-py2.py3-none-any.whl (200 kB)
+     |████████████████████████████████| 200 kB 3.3 MB/s
+Collecting scipy~=1.7.1
+  Downloading scipy-1.7.3-cp39-cp39-win_amd64.whl (34.3 MB)
+     |████████████████████████████████| 34.3 MB 1.3 MB/s
+Collecting tqdm~=4.62.2
+  Using cached tqdm-4.62.3-py2.py3-none-any.whl (76 kB)
+Collecting opencv-python~=4.5.5.62
+  Downloading opencv_python-4.5.5.64-cp36-abi3-win_amd64.whl (35.4 MB)
+     |████████████████████████████████| 35.4 MB 1.3 MB/s
+Collecting lark-parser<0.8.0,>=0.7.1
+  Downloading lark-parser-0.7.8.tar.gz (276 kB)
+     |████████████████████████████████| 276 kB 6.8 MB/s
+Collecting pillow>=8.3.2
+  Using cached Pillow-9.2.0-cp39-cp39-win_amd64.whl (3.3 MB)
+Collecting colorama
+  Using cached colorama-0.4.5-py2.py3-none-any.whl (16 kB)
+Using legacy 'setup.py install' for commentjson, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for lark-parser, since package 'wheel' is not installed.
+Installing collected packages: pillow, numpy, lark-parser, colorama, tqdm, scipy, pybind11, opencv-python, imageio, commentjson
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.23.1
+    Uninstalling numpy-1.23.1:
+      Successfully uninstalled numpy-1.23.1
+    Running setup.py install for lark-parser ... done
+  Attempting uninstall: opencv-python
+    Found existing installation: opencv-python 4.6.0.66
+    Uninstalling opencv-python-4.6.0.66:
+      Successfully uninstalled opencv-python-4.6.0.66
+    Running setup.py install for commentjson ... done
+Successfully installed colorama-0.4.5 commentjson-0.9.0 imageio-2.16.2 lark-parser-0.7.8 numpy-1.21.6 opencv-python-4.5.5.64 pillow-9.2.0 pybind11-2.7.1 scipy-1.7.3 tqdm-4.62.3
+WARNING: You are using pip version 21.2.3; however, version 22.2 is available.
+You should consider upgrading via the 'C:\Users\schlb\Documents\GitHub\instant-ngp\env\Scripts\python.exe -m pip install --upgrade pip' command.
+
+(env) c:\Users\schlb\Documents\GitHub\instant-ngp>python -m pip install pyexr
+Collecting pyexr
+  Downloading PyEXR-0.3.10.tar.gz (4.6 kB)
+Collecting OpenEXR
+  Downloading OpenEXR-1.3.8.tar.gz (11 kB)
+Requirement already satisfied: numpy in c:\users\schlb\documents\github\instant-ngp\env\lib\site-packages (from pyexr) (1.21.6)
+Collecting future
+  Downloading future-0.18.2.tar.gz (829 kB)
+     |████████████████████████████████| 829 kB 939 kB/s
+Using legacy 'setup.py install' for pyexr, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for future, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for OpenEXR, since package 'wheel' is not installed.
+Installing collected packages: OpenEXR, future, pyexr
+    Running setup.py install for OpenEXR ... error
+    ERROR: Command errored out with exit status 1:
+     command: 'C:\Users\schlb\Documents\GitHub\instant-ngp\env\Scripts\python.exe' -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\schlb\\AppData\\Local\\Temp\\pip-install-rvsm6jy4\\openexr_9e63a4a306b04820995fb0b20ff58b12\\setup.py'"'"'; __file__='"'"'C:\\Users\\schlb\\AppData\\Local\\Temp\\pip-install-rvsm6jy4\\openexr_9e63a4a306b04820995fb0b20ff58b12\\setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record 'C:\Users\schlb\AppData\Local\Temp\pip-record-bg08qfes\install-record.txt' --single-version-externally-managed --compile --install-headers 'C:\Users\schlb\Documents\GitHub\instant-ngp\env\include\site\python3.9\OpenEXR'
+         cwd: C:\Users\schlb\AppData\Local\Temp\pip-install-rvsm6jy4\openexr_9e63a4a306b04820995fb0b20ff58b12\
+    Complete output (16 lines):
+    Looking for libOpenEXR...
+    running install
+    running build
+    running build_py
+    creating build
+    creating build\lib.win32-3.9
+    copying Imath.py -> build\lib.win32-3.9
+    running build_ext
+    building 'OpenEXR' extension
+    creating build\temp.win32-3.9
+    creating build\temp.win32-3.9\Release
+    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\cl.exe /c /nologo /Ox /W3 /GL /DNDEBUG /MD -I/usr/include/OpenEXR -I/usr/local/include/OpenEXR -I/opt/local/include/OpenEXR -I/usr/include/Imath -I/usr/local/include/Imath -I/opt/local/include/Imath -IC:\Users\schlb\Documents\GitHub\instant-ngp\env\include -IC:\Users\schlb\anaconda3\include -IC:\Users\schlb\anaconda3\include -IC:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include -IC:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include -IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt -IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared -IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um -IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt -IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt -IC:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include -IC:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include -IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt -IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared -IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um -IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt -IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt /EHsc /TpOpenEXR.cpp /Fobuild\temp.win32-3.9\Release\OpenEXR.obj -g -DVERSION="1.3.8"
+    cl : Command line warning D9002 : ignoring unknown option '-g'
+    OpenEXR.cpp
+    OpenEXR.cpp(36): fatal error C1083: Cannot open include file: 'ImfIO.h': No such file or directory
+    error: command 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\cl.exe' failed with exit code 2
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: 'C:\Users\schlb\Documents\GitHub\instant-ngp\env\Scripts\python.exe' -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\schlb\\AppData\\Local\\Temp\\pip-install-rvsm6jy4\\openexr_9e63a4a306b04820995fb0b20ff58b12\\setup.py'"'"'; __file__='"'"'C:\\Users\\schlb\\AppData\\Local\\Temp\\pip-install-rvsm6jy4\\openexr_9e63a4a306b04820995fb0b20ff58b12\\setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record 'C:\Users\schlb\AppData\Local\Temp\pip-record-bg08qfes\install-record.txt' --single-version-externally-managed --compile --install-headers 'C:\Users\schlb\Documents\GitHub\instant-ngp\env\include\site\python3.9\OpenEXR' Check the logs for full command output.
+WARNING: You are using pip version 21.2.3; however, version 22.2 is available.
+You should consider upgrading via the 'C:\Users\schlb\Documents\GitHub\instant-ngp\env\Scripts\python.exe -m pip install --upgrade pip' command.
+
+(env) c:\Users\schlb\Documents\GitHub\instant-ngp>python -m pip install OpenEXR-1.3.2-cp39-cp39-win_amd64.whl
+Processing c:\users\schlb\documents\github\instant-ngp\openexr-1.3.2-cp39-cp39-win_amd64.whl
+Installing collected packages: OpenEXR
+Successfully installed OpenEXR-1.3.2
+WARNING: You are using pip version 21.2.3; however, version 22.2 is available.
+You should consider upgrading via the 'C:\Users\schlb\Documents\GitHub\instant-ngp\env\Scripts\python.exe -m pip install --upgrade pip' command.
+
+(env) c:\Users\schlb\Documents\GitHub\instant-ngp>
